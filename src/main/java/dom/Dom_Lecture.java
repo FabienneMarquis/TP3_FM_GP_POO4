@@ -23,7 +23,7 @@ public class Dom_Lecture {
 // lecture du contenu d'un fichier XML avec le constructeur pour
  	  // cr�er le document DOM correspondant
 	  //File xmlFile = new File("ExempleDOM.xml");
-	  File xmlFile = new File("livre2.xml");
+	  File xmlFile = new File("tournee.xml");
 	  Document document = constructeur.parse(xmlFile);
 
 	  // traitement du document

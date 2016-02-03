@@ -3,20 +3,53 @@ package JAXB;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class LivreMain {
+/**
+ * Created by 1494778 on 2016-02-02.
+ */
+public class TaxiMain {
 
-  private static final String LIBRAIRIE_XML = "./Librairie-jaxb.xml";
+    private static final String MY_TAXI_XML = "./ListeTaxi-jaxb.xml";
 
-  public static void main(String[] args) throws JAXBException, IOException {
 
-    ArrayList<Livre> livreList = new ArrayList<Livre>();
 
+    public static void main(String[] args) throws JAXBException, IOException {
+
+        ArrayList<Taxi> list = new ArrayList<Taxi>();
+        try {
+            JAXBContext context = JAXBContext.newInstance(CompagnieTaxi.class);
+            Marshaller m = context.createMarshaller();
+            m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT
+                    , Boolean.TRUE);
+            ArrayList<Taxi> tList = new ArrayList<Taxi>();
+            Taxi taxi = new Taxi();
+            taxi.setImmatriculation("Alien");
+            taxi.setMarque("toyota");
+            taxi.setNbPlace("5");
+            taxi.setRefVehicule("refpouette");
+            taxi.setZone("twilligth");
+            tList.add(taxi);
+            CompagnieTaxi ctaxi = new CompagnieTaxi();
+            ctaxi.setListTaxi(tList);
+            ctaxi.setLocation("Quebec");
+            ctaxi.setNom("BAnane");
+
+            m.marshal(ctaxi, new File(MY_TAXI_XML));
+
+//            Unmarshaller um = context.createUnmarshaller();
+//            Departement departement = (Departement) um.unmarshal(new File(DEPARTEMENT_XML));
+//
+//            System.out.println(departement);
+
+
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
+
+/*
     // create books
     Livre livre1 = new Livre();
     livre1.setIsbn("978-0060554736");
@@ -54,10 +87,11 @@ public class LivreMain {
     System.out.println("Output à partir fichier XML: ");
     Unmarshaller um = context.createUnmarshaller();
     Librairie librairie2 = (Librairie) um.unmarshal(new FileReader(LIBRAIRIE_XML));
-    ArrayList<Livre> list = librairie2.getlivresList();
+    ArrayList<Livre> list = librairie2.getListTaxi();
     for (Livre livre : list) {
       System.out.println("Livre: " + livre.getnom() + " à partir "
           + livre.getauteur());
     }
-  }
+  }*/
+    }
 }

@@ -3,9 +3,13 @@ package controle;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+
+import java.net.URL;
+import java.util.ResourceBundle;
 
 
 /**
@@ -13,7 +17,7 @@ import javafx.stage.Stage;
  */
 
 
-public class ControllerStar extends Application {
+public class ControllerStar extends Application implements Initializable{
 
     @FXML
     private GridPane root;
@@ -41,7 +45,9 @@ public class ControllerStar extends Application {
 
     }
 
+    public void initialize(URL location, ResourceBundle resources) {
 
+    }
 }
 
 
