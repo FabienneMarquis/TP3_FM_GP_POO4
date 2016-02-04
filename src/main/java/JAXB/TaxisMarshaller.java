@@ -8,10 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by 0940135 on 2016-02-04.
+ * @author Fabienne et Gabriel on 2016-02-04.
  */
 public class TaxisMarshaller {
 
+    /**
+     *  this methode save a list of taxi to and xml file
+     * @param taxiList the list of taxi to save in xml
+     * @param file the filename to save the parsed xml at
+     */
     public void marshalTaxistoFile(List<Taxi> taxiList, String file){
         try {
             JAXBContext context = JAXBContext.newInstance(Taxis.class);

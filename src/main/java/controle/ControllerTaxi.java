@@ -1,8 +1,6 @@
 package controle;
 
-/**
- * Created by 1494778 on 2016-02-02.
- */
+
 
 import JAXB.Chauffeur;
 import JAXB.Taxi;
@@ -20,7 +18,9 @@ import javafx.util.StringConverter;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
+/**
+ * @author Fabienne et Gabriel on 2016-02-04.
+ */
 public class ControllerTaxi implements Initializable{
 
     @FXML

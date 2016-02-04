@@ -1,8 +1,6 @@
 package controle;
 
-/**
- * Created by 1494778 on 2016-02-02.
- */
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +11,9 @@ import javafx.scene.control.CheckBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
+/**
+ * @author Fabienne et Gabriel on 2016-02-04.
+ */
 public class ControllerMenu {
 
     @FXML

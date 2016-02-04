@@ -5,10 +5,10 @@ import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
-/**
- * Created by 0940135 on 2016-02-04.
- */
 @XmlRootElement(namespace = "")
+/**
+ * @author Fabienne et Gabriel on 2016-02-04.
+ */
 public class Taxis {
     // XmlElement sets the name of the entities
     @XmlElement(name = "taxi")

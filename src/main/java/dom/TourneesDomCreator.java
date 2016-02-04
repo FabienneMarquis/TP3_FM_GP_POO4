@@ -16,8 +16,16 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Fabienne et Gabriel on 2016-02-04.
+ */
 public class TourneesDomCreator {
 
+    /**
+     * create the XML file from a filepath and a list of tournees
+     * @param tournees the list of tournees to save in the XML
+     * @param filePath the filepath to save the XML file at.
+     */
     public void create(List<Tournee> tournees, String filePath) {
         try {
 
@@ -82,15 +90,15 @@ public class TourneesDomCreator {
     public static void main(String[] args) {
         TourneesDomCreator dc = new TourneesDomCreator();
         List<Tournee> tournees = new ArrayList<>();
-        for (int i = 0;i<5;i++){
+        for (int i = 0; i < 5; i++) {
             Tournee tournee = new Tournee();
-            tournee.setOrigine("PlaceA"+i);
+            tournee.setOrigine("PlaceA" + i);
             tournee.setDestination("PlaceB" + i);
             tournee.setHeureDepart("Heure" + i);
             tournee.setClient("client" + i);
-            tournee.setRefVehicule("vehicule"+i);
+            tournee.setRefVehicule("vehicule" + i);
             tournees.add(tournee);
         }
-        dc.create(tournees,"tournees.xml");
+        dc.create(tournees, "tournees.xml");
     }
 }

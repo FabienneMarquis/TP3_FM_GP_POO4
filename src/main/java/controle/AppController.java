@@ -13,10 +13,8 @@ import java.util.ResourceBundle;
 
 
 /**
- * Created by 1494778 on 2016-02-02.
+ * @author Fabienne et Gabriel on 2016-02-04.
  */
-
-
 public class AppController extends Application implements Initializable{
 
     @FXML

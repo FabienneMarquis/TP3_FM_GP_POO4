@@ -1,7 +1,6 @@
 package SAX;
 
 import JAXB.Chauffeur;
-import JAXB.Taxi;
 import org.xml.sax.*;
 import org.xml.sax.helpers.XMLReaderFactory;
 
@@ -10,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by 0940135 on 2016-02-04.
+ * @author Fabienne et Gabriel on 2016-02-04.
  */
 public class ChauffeurReader implements ContentHandler {
     String tag;
@@ -63,13 +62,13 @@ public class ChauffeurReader implements ContentHandler {
 
                 switch (tag) {
                     case "nom":
-                        chauffeurs.get(pos-1).setNom(donnees);
+                        chauffeurs.get(pos- 1).setNom(donnees);
                         break;
-                    case "prénom":
-                        chauffeurs.get(pos-1).setPrénom(donnees);
+                    case "prenom":
+                        chauffeurs.get(pos-1).setPrenom(donnees);
                         break;
-                    case "téléphone":
-                        chauffeurs.get(pos-1).setTéléphone(donnees);
+                    case "telephone":
+                        chauffeurs.get(pos-1).setTelephone(donnees);
                         break;
                     case "permis":
                         chauffeurs.get(pos-1).setPermis(donnees);
@@ -97,19 +96,19 @@ public class ChauffeurReader implements ContentHandler {
 
     }
 
-    public List<Chauffeur> getChauffeurs() {
-        return chauffeurs;
-    }
-
+    /**
+     *  this method return the list of chauffeur from xml file.
+     * @param file
+     * @return a list of chauffeur from the xml file
+     */
     public List<Chauffeur> read(String file) {
         XMLReader xr = null;
         try {
             xr = XMLReaderFactory.createXMLReader();
-            ChauffeurReader chauffeurReader;
-            xr.setContentHandler(chauffeurReader = new ChauffeurReader());
+            xr.setContentHandler(this);
             try {
                 xr.parse(file);
-                return chauffeurReader.getChauffeurs();
+                return chauffeurs;
 
             } catch (IOException e) {
                 e.printStackTrace();

@@ -9,16 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by 0940135 on 2016-02-04.
+ * @author Fabienne et Gabriel on 2016-02-04.
  */
 public class TaxiReader implements ContentHandler {
     String tag;
     List<Taxi> taxis;
     int pos;
 
-    public List<Taxi> getTaxis() {
-        return taxis;
-    }
 
     @Override
     public void setDocumentLocator(Locator locator) {
@@ -103,6 +100,11 @@ public class TaxiReader implements ContentHandler {
 
     }
 
+    /**
+     *  this method give all the taxis stored in a xml file
+     * @param file
+     * @return list of taxi saved in the xml file
+     */
     public List<Taxi> read(String file){
         XMLReader xr = null;
         try {

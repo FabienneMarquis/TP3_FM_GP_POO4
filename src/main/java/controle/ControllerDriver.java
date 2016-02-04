@@ -1,8 +1,6 @@
 package controle;
 
-/**
- * Created by 1494778 on 2016-02-02.
- */
+
 import JAXB.Chauffeur;
 import SAX.ChauffeurReader;
 import javafx.collections.FXCollections;
@@ -17,7 +15,9 @@ import javafx.util.StringConverter;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
+/**
+ * @author Fabienne et Gabriel on 2016-02-04.
+ */
 public class ControllerDriver implements Initializable{
 
     @FXML
@@ -44,8 +44,8 @@ public class ControllerDriver implements Initializable{
     @FXML
     void showDriver(ActionEvent event) {
         txtFieldNomChauffeur.setText(listOfDrivers.getValue().getNom());
-        txtFieldPrenomChauffeur.setText(listOfDrivers.getValue().getPrénom());
-        txtFieldTelephoneChauffeur.setText(listOfDrivers.getValue().getTéléphone());
+        txtFieldPrenomChauffeur.setText(listOfDrivers.getValue().getPrenom());
+        txtFieldTelephoneChauffeur.setText(listOfDrivers.getValue().getTelephone());
         txtFieldNumeroPermisChauffeur.setText(listOfDrivers.getValue().getPermis());
         txtFieldReferencevehiculeChauffeur.setText(listOfDrivers.getValue().getRefVehicule());
     }

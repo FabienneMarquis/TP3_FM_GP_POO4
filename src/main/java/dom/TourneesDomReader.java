@@ -13,7 +13,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * @author Fabienne et Gabriel on 2016-02-04.
+ */
 public class TourneesDomReader {
     public static void main(String[] args) {
         TourneesDomReader reader = new TourneesDomReader();
@@ -22,6 +24,11 @@ public class TourneesDomReader {
         tournees.forEach(System.out::println);
     }
 
+    /**
+     * this methode read a list of tournees from an xml file
+     * @param file the filename of the xml file to read the list at.
+     * @return the list of tournees readed from xml file.
+     */
     public List<Tournee> readTourneesFromFile(String file) {
         try {
             // cr�ation d'une fabrique de constructeur de documents DOM

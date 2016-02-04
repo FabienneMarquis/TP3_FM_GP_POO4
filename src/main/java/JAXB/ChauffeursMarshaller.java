@@ -8,9 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by 0940135 on 2016-02-04.
+ * @author Fabienne et Gabriel on 2016-02-04.
  */
 public class ChauffeursMarshaller {
+    /**
+     * this method save a list of taxis to an xml file.
+     * @param list the list of taxis to save in xml
+     * @param file the filename to save the parsed xml at.
+     */
     public void marshalTaxistoFile(List<Chauffeur> list, String file) {
         try {
             JAXBContext context = JAXBContext.newInstance(Chauffeurs.class);
@@ -34,9 +39,9 @@ public class ChauffeursMarshaller {
         for (int i = 0; i < 5; i++) {
             Chauffeur chauffeur = new Chauffeur();
             chauffeur.setRefVehicule("Ref" + i);
-            chauffeur.setTéléphone("Tel" + i);
+            chauffeur.setTelephone("Tel" + i);
             chauffeur.setPermis("Permi" + i);
-            chauffeur.setPrénom("Prenom" + i);
+            chauffeur.setPrenom("Prenom" + i);
             chauffeur.setNom("Nom" + i);
             chauffeurs.add(chauffeur);
         }

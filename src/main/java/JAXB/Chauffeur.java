@@ -1,20 +1,16 @@
 package JAXB;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import java.io.File;
-import java.io.IOException;
 
-/**
- * Created by 1494778 on 2016-02-02.
- */
+
 @XmlRootElement(name = "chauffeur")
-@XmlType(propOrder = {"nom","prénom", "téléphone", "permis", "refVehicule"})
+@XmlType(propOrder = {"nom","prenom", "telephone", "permis", "refVehicule"})
+/**
+ * @author Fabienne et Gabriel on 2016-02-04.
+ */
 public class Chauffeur {
-   private String nom, prénom, téléphone, permis, refVehicule;
+   private String nom, prenom, telephone, permis, refVehicule;
 
     public String getNom() {
         return nom;
@@ -24,20 +20,20 @@ public class Chauffeur {
         this.nom = nom;
     }
 
-    public String getPrénom() {
-        return prénom;
+    public String getPrenom() {
+        return prenom;
     }
 
-    public void setPrénom(String prénom) {
-        this.prénom = prénom;
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
     }
 
-    public String getTéléphone() {
-        return téléphone;
+    public String getTelephone() {
+        return telephone;
     }
 
-    public void setTéléphone(String téléphone) {
-        this.téléphone = téléphone;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 
     public String getPermis() {
@@ -60,8 +56,8 @@ public class Chauffeur {
     public String toString() {
         return "Chauffeur{" +
                 "nom='" + nom + '\'' +
-                ", prénom='" + prénom + '\'' +
-                ", téléphone='" + téléphone + '\'' +
+                ", prenom='" + prenom + '\'' +
+                ", telephone='" + telephone + '\'' +
                 ", permis='" + permis + '\'' +
                 ", refVehicule='" + refVehicule + '\'' +
                 '}';

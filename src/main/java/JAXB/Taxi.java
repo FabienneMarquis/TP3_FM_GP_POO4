@@ -12,6 +12,9 @@ import java.util.ArrayList;
 
 @XmlRootElement(name = "taxi")
 @XmlType(propOrder = {"immatriculation","nbPlace", "marque", "zone", "refVehicule"})
+/**
+ * @author Fabienne et Gabriel on 2016-02-04.
+ */
 public class Taxi {
 
 
