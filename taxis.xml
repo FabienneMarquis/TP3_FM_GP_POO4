@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<taxis>
+    <taxi>
+        <immatriculation>Immatriculation0</immatriculation>
+        <nbPlace>NbPlace0</nbPlace>
+        <marque>Marque0</marque>
+        <zone>Zone0</zone>
+        <refVehicule>Ref0</refVehicule>
+    </taxi>
+    <taxi>
+        <immatriculation>Immatriculation1</immatriculation>
+        <nbPlace>NbPlace1</nbPlace>
+        <marque>Marque1</marque>
+        <zone>Zone1</zone>
+        <refVehicule>Ref1</refVehicule>
+    </taxi>
+    <taxi>
+        <immatriculation>Immatriculation2</immatriculation>
+        <nbPlace>NbPlace2</nbPlace>
+        <marque>Marque2</marque>
+        <zone>Zone2</zone>
+        <refVehicule>Ref2</refVehicule>
+    </taxi>
+    <taxi>
+        <immatriculation>Immatriculation3</immatriculation>
+        <nbPlace>NbPlace3</nbPlace>
+        <marque>Marque3</marque>
+        <zone>Zone3</zone>
+        <refVehicule>Ref3</refVehicule>
+    </taxi>
+    <taxi>
+        <immatriculation>Immatriculation4</immatriculation>
+        <nbPlace>NbPlace4</nbPlace>
+        <marque>Marque4</marque>
+        <zone>Zone4</zone>
+        <refVehicule>Ref4</refVehicule>
+    </taxi>
+</taxis>

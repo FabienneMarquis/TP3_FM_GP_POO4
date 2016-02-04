@@ -54,4 +54,14 @@ public class Tournee {
     }
 
 
+    @Override
+    public String toString() {
+        return "Tournee{" +
+                "origine='" + origine + '\'' +
+                ", destination='" + destination + '\'' +
+                ", heureDepart='" + heureDepart + '\'' +
+                ", client='" + client + '\'' +
+                ", refVehicule='" + refVehicule + '\'' +
+                '}';
+    }
 }

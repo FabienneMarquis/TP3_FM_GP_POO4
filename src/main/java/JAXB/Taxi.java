@@ -1,8 +1,14 @@
 package JAXB;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
 
 @XmlRootElement(name = "taxi")
 @XmlType(propOrder = {"immatriculation","nbPlace", "marque", "zone", "refVehicule"})
@@ -55,4 +61,14 @@ public class Taxi {
         this.refVehicule = refVehicule;
     }
 
+    @Override
+    public String toString() {
+        return "Taxi{" +
+                "immatriculation='" + immatriculation + '\'' +
+                ", nbPlace='" + nbPlace + '\'' +
+                ", marque='" + marque + '\'' +
+                ", zone='" + zone + '\'' +
+                ", refVehicule='" + refVehicule + '\'' +
+                '}';
+    }
 }

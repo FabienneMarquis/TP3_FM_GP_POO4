@@ -7,25 +7,23 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
+import java.util.List;
 
 //This statement means that class is the root-element of our example
 @XmlRootElement(namespace = "")
-public class ListChauffeur {
+public class Chauffeurs {
 
   // XmLElementWrapper generates a wrapper element around XML representation
-  @XmlElementWrapper(name = "ListChauffeur")
   // XmlElement sets the name of the entities
   @XmlElement(name = "chauffeur")
-  private ArrayList<Chauffeur> ListChauffeur;
-  private String nom;
-  private String location;
+  private List<Chauffeur> chauffeurs;
 
-  public void setListChauffeur(ArrayList<Chauffeur> ListChauffeur) {
-    this.ListChauffeur = ListChauffeur;
+  public void setChauffeurs(List<Chauffeur> chauffeurs) {
+    this.chauffeurs = chauffeurs;
   }
 
-  public ArrayList<Chauffeur> getListChauffeur() {
-    return ListChauffeur;
+  public List<Chauffeur> getchauffeurs() {
+    return chauffeurs;
   }
 
 }

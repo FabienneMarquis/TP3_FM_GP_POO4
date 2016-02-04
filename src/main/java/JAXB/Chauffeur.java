@@ -1,7 +1,12 @@
 package JAXB;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by 1494778 on 2016-02-02.
@@ -49,5 +54,16 @@ public class Chauffeur {
 
     public void setRefVehicule(String refVehicule) {
         this.refVehicule = refVehicule;
+    }
+
+    @Override
+    public String toString() {
+        return "Chauffeur{" +
+                "nom='" + nom + '\'' +
+                ", prénom='" + prénom + '\'' +
+                ", téléphone='" + téléphone + '\'' +
+                ", permis='" + permis + '\'' +
+                ", refVehicule='" + refVehicule + '\'' +
+                '}';
     }
 }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<chauffeurs>
+    <chauffeur>
+        <nom>Nom0</nom>
+        <prénom>Prenom0</prénom>
+        <téléphone>Tel0</téléphone>
+        <permis>Permi0</permis>
+        <refVehicule>Ref0</refVehicule>
+    </chauffeur>
+    <chauffeur>
+        <nom>Nom1</nom>
+        <prénom>Prenom1</prénom>
+        <téléphone>Tel1</téléphone>
+        <permis>Permi1</permis>
+        <refVehicule>Ref1</refVehicule>
+    </chauffeur>
+    <chauffeur>
+        <nom>Nom2</nom>
+        <prénom>Prenom2</prénom>
+        <téléphone>Tel2</téléphone>
+        <permis>Permi2</permis>
+        <refVehicule>Ref2</refVehicule>
+    </chauffeur>
+    <chauffeur>
+        <nom>Nom3</nom>
+        <prénom>Prenom3</prénom>
+        <téléphone>Tel3</téléphone>
+        <permis>Permi3</permis>
+        <refVehicule>Ref3</refVehicule>
+    </chauffeur>
+    <chauffeur>
+        <nom>Nom4</nom>
+        <prénom>Prenom4</prénom>
+        <téléphone>Tel4</téléphone>
+        <permis>Permi4</permis>
+        <refVehicule>Ref4</refVehicule>
+    </chauffeur>
+</chauffeurs>

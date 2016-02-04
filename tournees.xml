@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tournees>
+    <tournee>
+        <origine>PlaceA0</origine>
+        <destination>PlaceB0</destination>
+        <heureDepart>Heure0</heureDepart>
+        <client>client0</client>
+        <refVehicule>vehicule0</refVehicule>
+    </tournee>
+    <tournee>
+        <origine>PlaceA1</origine>
+        <destination>PlaceB1</destination>
+        <heureDepart>Heure1</heureDepart>
+        <client>client1</client>
+        <refVehicule>vehicule1</refVehicule>
+    </tournee>
+    <tournee>
+        <origine>PlaceA2</origine>
+        <destination>PlaceB2</destination>
+        <heureDepart>Heure2</heureDepart>
+        <client>client2</client>
+        <refVehicule>vehicule2</refVehicule>
+    </tournee>
+    <tournee>
+        <origine>PlaceA3</origine>
+        <destination>PlaceB3</destination>
+        <heureDepart>Heure3</heureDepart>
+        <client>client3</client>
+        <refVehicule>vehicule3</refVehicule>
+    </tournee>
+    <tournee>
+        <origine>PlaceA4</origine>
+        <destination>PlaceB4</destination>
+        <heureDepart>Heure4</heureDepart>
+        <client>client4</client>
+        <refVehicule>vehicule4</refVehicule>
+    </tournee>
+</tournees>

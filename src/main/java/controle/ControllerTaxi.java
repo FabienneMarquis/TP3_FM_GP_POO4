@@ -4,16 +4,27 @@ package controle;
  * Created by 1494778 on 2016-02-02.
  */
 
+import JAXB.Chauffeur;
+import JAXB.Taxi;
+import SAX.ChauffeurReader;
+import SAX.TaxiReader;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.util.StringConverter;
 
-public class ControllerTaxi {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class ControllerTaxi implements Initializable{
 
     @FXML
-    private ChoiceBox<?> listOfDrivers;
+    private ChoiceBox<Taxi> listOfDrivers;
 
     @FXML
     private Button btnOkChoiceDriver;
@@ -35,7 +46,29 @@ public class ControllerTaxi {
 
     @FXML
     void showDriver(ActionEvent event) {
-
+        txtFieldReferenceVehiculeTaxi.setText(listOfDrivers.getValue().getRefVehicule());
+        txtFieldZoneTaxi.setText(listOfDrivers.getValue().getZone());
+        txtFieldImmatriculationTaxi.setText(listOfDrivers.getValue().getImmatriculation());
+        txtFieldNbrPlace.setText(listOfDrivers.getValue().getNbPlace());
+        txtFieldMarqueTaxi.setText(listOfDrivers.getValue().getMarque());
     }
+    ObservableList<Taxi> taxis = FXCollections.observableArrayList();
 
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        listOfDrivers.setConverter(new StringConverter<Taxi>() {
+            @Override
+            public String toString(Taxi object) {
+                return object.getImmatriculation();
+            }
+
+            @Override
+            public Taxi fromString(String string) {
+                return null;
+            }
+        });
+        TaxiReader reader = new TaxiReader();
+        taxis.setAll(reader.read("taxis.xml"));
+        listOfDrivers.setItems(taxis);
+    }
 }
